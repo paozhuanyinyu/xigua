@@ -1120,7 +1120,7 @@ window.__require = function e(t, n, o) {
                     if (0 == this.endOne) {
                         for (var t = 0, n = function(n) {
                                 setTimeout(function() {
-                                    e.createFruitL(e.fruitNode.children[n].getComponent("fruitData").fruitNumber, e.fruitNode.children[n].position, e.fruitNode.children[n].width), a.default.score += 5 * e.fruitNode.children[n].getComponent("fruitData").fruitNumber + 1, i.default.Instance.SetScoreTween(a.default.score), e.fruitNode.children[n].active = !1
+                                    e.createFruitL(e.fruitNode.children[n].getComponent("fruitData").fruitNumber, e.fruitNode.children[n].position, e.fruitNode.children[n].width), a.default.score += 6 * e.fruitNode.children[n].getComponent("fruitData").fruitNumber + 1, i.default.Instance.SetScoreTween(a.default.score), e.fruitNode.children[n].active = !1
                                 }, 100 * ++t)
                             }, o = this.fruitNode.children.length - 1; o >= 0; o--) n(o);
                         this.lineNode.active = !0;
@@ -1135,7 +1135,7 @@ window.__require = function e(t, n, o) {
                         for (var t = 0; t < this.fruitNode.children.length; t++) this.fruitNode.children[t].removeComponent(cc.PhysicsCircleCollider), this.fruitNode.children[t].removeComponent(cc.RigidBody);
                         for (var o = function(t) {
                                 setTimeout(function() {
-                                    e.createFruitL(e.fruitNode.children[t].getComponent("fruitData").fruitNumber, e.fruitNode.children[t].position, e.fruitNode.children[t].width), a.default.score += 5 * e.fruitNode.children[t].getComponent("fruitData").fruitNumber + 1, i.default.Instance.SetScoreTween(a.default.score), e.fruitNode.children[t].active = !1
+                                    e.createFruitL(e.fruitNode.children[t].getComponent("fruitData").fruitNumber, e.fruitNode.children[t].position, e.fruitNode.children[t].width), a.default.score += 6 * e.fruitNode.children[t].getComponent("fruitData").fruitNumber + 1, i.default.Instance.SetScoreTween(a.default.score), e.fruitNode.children[t].active = !1
                                 }, 100 * t)
                             }, c = 0; c < this.fruitNode.children.length; c++) o(c);
                         this.lineNode.active = !0;
@@ -3346,11 +3346,11 @@ window.__require = function e(t, n, o) {
                         t.node.parent = cc.find("Canvas/fruitNode"), i.default.Instance.fruitHeigth = i.default.Instance.findHighestFruit(), null != t.node.getComponent(cc.RigidBody) && (t.node.getComponent(cc.RigidBody).angularVelocity = 0);
                         var c = this.fruitNumber,
                             r = n.node.getComponent("fruitData").fruitNumber;
-                        c == r && c < 9 && r < 9 ? (this.pengzhuangCount += 1, 0 == t.node.getComponent("fruitData").getNumber() && (a.default.score += 5 * this.fruitNumber + 1, u.default.Instance.SetScoreTween(a.default.score), n.node.getComponent(cc.PhysicsCircleCollider).radius = 0, n.node.getComponent(cc.PhysicsCircleCollider).apply(), this.node.getComponent(cc.PhysicsCircleCollider).radius = 0, this.node.getComponent(cc.PhysicsCircleCollider).apply(), cc.tween(t.node).to(.1, {
+                        c == r && c < 9 && r < 9 ? (this.pengzhuangCount += 1, 0 == t.node.getComponent("fruitData").getNumber() && (a.default.score += 6 * this.fruitNumber + 1, u.default.Instance.SetScoreTween(a.default.score), n.node.getComponent(cc.PhysicsCircleCollider).radius = 0, n.node.getComponent(cc.PhysicsCircleCollider).apply(), this.node.getComponent(cc.PhysicsCircleCollider).radius = 0, this.node.getComponent(cc.PhysicsCircleCollider).apply(), cc.tween(t.node).to(.1, {
                             position: n.node.position
                         }).call(function() {
                             i.default.Instance.createFruitSui(o.fruitNumber, n.node.position), i.default.Instance.createFruitL(o.fruitNumber, n.node.position, n.node.width), i.default.Instance.createLevelUpFruit(o.fruitNumber + 1, n.node.position), n.node.active = !1, t.node.active = !1, n.node.destroy(), t.node.destroy()
-                        }).start())) : c == r && 9 == c && 9 == r && (this.pengzhuangCount += 1, 0 == t.node.getComponent("fruitData").getNumber() && (a.default.score += 5 * this.fruitNumber + 1, u.default.Instance.SetScoreTween(a.default.score), n.node.getComponent(cc.PhysicsCircleCollider).radius = 0, n.node.getComponent(cc.PhysicsCircleCollider).apply(), this.node.getComponent(cc.PhysicsCircleCollider).radius = 0, this.node.getComponent(cc.PhysicsCircleCollider).apply(), a.default.playerTouch = !1, cc.tween(t.node).to(.1, {
+                        }).start())) : c == r && 9 == c && 9 == r && (this.pengzhuangCount += 1, 0 == t.node.getComponent("fruitData").getNumber() && (a.default.score += 6 * this.fruitNumber + 1, u.default.Instance.SetScoreTween(a.default.score), n.node.getComponent(cc.PhysicsCircleCollider).radius = 0, n.node.getComponent(cc.PhysicsCircleCollider).apply(), this.node.getComponent(cc.PhysicsCircleCollider).radius = 0, this.node.getComponent(cc.PhysicsCircleCollider).apply(), a.default.playerTouch = !1, cc.tween(t.node).to(.1, {
                             position: n.node.position
                         }).call(function() {
                             i.default.Instance.createFruitSui(o.fruitNumber, n.node.position), i.default.Instance.createFruitL(o.fruitNumber, n.node.position, n.node.width), i.default.Instance.createLevelUpFruit(o.fruitNumber + 1, n.node.position);

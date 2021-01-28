@@ -1616,8 +1616,8 @@ window.__require = function e(t, n, o) {
                     if (Math.abs(e.y - t.y) <= 15) {
                         p.default.Instance.Play(1, !1, 1), a.default.tuoweiCtrl = !0, d.default.Instance.InjuredEffect();
                         var n = r.default.Spawn("great", cc.find("Canvas/bazieffect"));
-                        e.x > 0 ? n.position = cc.v2(e.x - 40, e.y) : n.position = cc.v2(e.x + 40, e.y), n.runAction(cc.sequence(cc.spawn(cc.moveBy(.4, 0, 200), cc.rotateBy(.4, 360)), cc.scaleTo(.15, 1.1), cc.scaleTo(.15, 1), cc.fadeOut(.2))), a.default.score += 10, d.default.Instance.SetScoreTween(a.default.score)
-                    } else p.default.Instance.Play(0, !1, 1), a.default.score += 5, d.default.Instance.SetScoreTween(a.default.score)
+                        e.x > 0 ? n.position = cc.v2(e.x - 40, e.y) : n.position = cc.v2(e.x + 40, e.y), n.runAction(cc.sequence(cc.spawn(cc.moveBy(.4, 0, 200), cc.rotateBy(.4, 360)), cc.scaleTo(.15, 1.1), cc.scaleTo(.15, 1), cc.fadeOut(.2))), a.default.score += 20, d.default.Instance.SetScoreTween(a.default.score)
+                    } else p.default.Instance.Play(0, !1, 1), a.default.score += 10, d.default.Instance.SetScoreTween(a.default.score)
                 }, t.prototype.GhostBornEff = function(e, t) {
                     for (var n = s.default.RandomInteger(24, 36), o = 0; o < n; o++) {
                         var c = r.default.Spawn("star", cc.find("Canvas/downEffParent"));
@@ -3366,7 +3366,7 @@ window.__require = function e(t, n, o) {
                             }).repeatForever().start();
                             var s = new cc.Node;
                             s.addComponent(cc.Sprite).spriteFrame = l.default.Instance.fruit[10], s.parent = c, s.position = cc.v2(0), d.default.Instance.Play(4, !1, 1), i.default.Instance.ribbonEffect(cc.v2(0, 0)), c.runAction(cc.sequence(cc.spawn(cc.jumpBy(1, 0, 0, 300, 1), cc.scaleTo(1, 1)), cc.delayTime(1), cc.spawn(cc.moveTo(1, cc.v2(0, 500)), cc.scaleTo(1, 0)), cc.callFunc(function() {
-                                a.default.score += 100, u.default.Instance.SetScoreTween(a.default.score), e.active = !1, a.default.playerTouch = !0, c.destroy()
+                                a.default.score += 200, u.default.Instance.SetScoreTween(a.default.score), e.active = !1, a.default.playerTouch = !0, c.destroy()
                             }))), n.node.active = !1, t.node.active = !1, n.node.destroy(), t.node.destroy()
                         }).start()))
                     }
@@ -3669,7 +3669,7 @@ window.__require = function e(t, n, o) {
                         r.default.Despawn("shell", e)
                     }))), e.runAction(cc.repeatForever(cc.rotateBy(3, 1080)))
                 }, t.prototype.onCollisionEnter = function(e, t) {
-                    "shell" == e.node.group && 2 == e.node.getComponent("shellData").shellLife ? e.node.getComponent("shellData").shellLife -= 1 : "shell" == e.node.group && 1 == e.node.getComponent("shellData").shellLife && (u.default.Instance.Play(2, !1, 1), t.node.active = !1, s.default.Instance.cannonNodeArr[this.cannonNumber] = 0, this.createCannonSui(t.node), e.node.stopAllActions(), i.default.score += 10, l.default.Instance.SetScoreTween(i.default.score), r.default.Despawn("shell", e.node), r.default.Despawn("peaCannon", t.node))
+                    "shell" == e.node.group && 2 == e.node.getComponent("shellData").shellLife ? e.node.getComponent("shellData").shellLife -= 1 : "shell" == e.node.group && 1 == e.node.getComponent("shellData").shellLife && (u.default.Instance.Play(2, !1, 1), t.node.active = !1, s.default.Instance.cannonNodeArr[this.cannonNumber] = 0, this.createCannonSui(t.node), e.node.stopAllActions(), i.default.score += 20, l.default.Instance.SetScoreTween(i.default.score), r.default.Despawn("shell", e.node), r.default.Despawn("peaCannon", t.node))
                 }, t.prototype.onCollisionStay = function(e, t) {}, t.prototype.onCollisionExit = function(e, t) {}, t.prototype.createCannonSui = function(e) {
                     var t = cc.instantiate(this.peaSuiPre);
                     t.parent = cc.find("Canvas/targetBoomNode"), t.position = e.position, t.scale = e.scale, t.angle = e.angle;
